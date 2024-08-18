@@ -1,0 +1,143 @@
+<html lang="en" class="hydrated">
+<%- include("head"); -%>
+
+   <body>
+      <div id="root">
+         <div class="App">
+            <!-- Header ================================================== -->
+            <header class="header-app">
+               <div>
+                  <div class="video-overlay"></div>
+                  <video autoplay loop muted preload="auto" loop="" id="bg-video" class="bg-video">
+                     <source src="/media/10966656HeaderVideo.mp4" type="video/mp4" />
+                  </video>
+               </div>
+               <header id="home" class="main-header">
+
+                  <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                  <label id="hamburger-menu" for="hamburger-input">
+                     <nav id="sidebar-menu">
+                        <h3>EXIT</h3>
+                        <ul>
+                           <li><a href="#home">Home</a></li>
+                           <li><a href="#section-about">About</a></li>
+                           <!-- <li><a href="#section-projects">Projects</a></li> -->
+                           <li><a href="#portfolio">Blog</a></li>
+                           <li><a href="#section-contact">Contact</a></li>
+                           <li><a href="https://github.com/aseelbahakeem">Projects</a></li>
+                        </ul>
+                     </nav>
+                  </label>
+                  <div class="nav-bar ">
+                     <p class="navigation-name">
+                        <img class="logo-img" src="/images/IMG_6230.PNG">
+                     </p>
+                     <nav class="main-navigation__header-nav ">
+                        <ul class="nav-links">
+                           <li><a href="#home">Home</a></li>
+
+                           <li><a href="#section-about">About</a></li>
+                           <!-- <li><a href="#section-projects">Projects</a></li> -->
+                           <li><a href="#portfolio">Blog</a>
+                           </li>
+                           <li><a href="#section-contact">Contact</a></li>
+                           <li><a href="https://github.com/aseelbahakeem">Projects</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </header>
+
+               <div class="landing-page">
+                  <div class="landing-container">
+                     <h1 class="heading-1">Hello, I'm <span>Aseel.</span></h1>
+                     <p class="heading-2">I'm a Developer.</p>
+                     <!-- <a href="#section-projects" class="btn-landing btn-white btn-animated">Contact Me</a> -->
+                     <a href="mailto:aseelfahadbahakeem@gmail.com" target="_blank" class="btn btnD1">Contact</a>
+
+                  </div>
+               </div>
+            </header>
+            <!-- -------------------------------------------------------
+                       ------------------- About me Section ------------------
+                      --------------------------------------------------------- -->
+            <!-- -------------------------------------------------------
+------------------- About me Section ------------------
+--------------------------------------------------------- -->
+            <section id="section-about" class="section-about " style="display: grid;">
+               <div class="about" style="display: grid; ;">
+                  <div class="text-content">
+                     <header class="page-header">
+                        <div class="page-header__inr">
+                           <div class="page-header__content is-onscreen">
+                              <div class="article-heading">
+                                 <h1 class="article-heading__title t-heading t-medium:s t-bigger:m t-biggest:l">
+                                    <span class="heading-1">About me<span class="dot">.</span></span>
+                                 </h1>
+                              </div>
+                              <p
+                                 class="page-header__lede t-primary lh-loose t-body:s t-sublede:m t-lede:l reveal-content">
+
+                                 Lorem ipsum dolor sit amet, <b>Cconsectetur</b> adipiscing elit. Sed molestie, turpis
+                                 non
+                                 placerat iaculis, nunc libero gravida dui, vitae vehicula elit nunc lacinia ligula.
+                                 Morbi finibus sem at finibus malesuada. Aenean non justo et sapien aliquam porttitor.
+                                 Morbi pretium lobortis libero. Aliquam eget massa at eros malesuada pharetra. Cras sit
+                                 amet purus malesuada, scelerisque nunc tempor, ultricies dolor. Morbi gravida metus
+                                 blandit lobortis commodo. Donec et quam iaculis, sollicitudin magna eget, eleifend
+                                 lectus. Integer massa odio, elementum quis tempus id, semper sed justo. Nullam iaculis
+                                 nisl mauris, blandit aliquam nisl dapibus ac. Nulla sollicitudin vel diam sit amet
+                                 venenatis. Sed varius elit nec nulla ultrices rutrum. Interdum et malesuada fames ac
+                                 ante ipsum primis in faucibus. Nullam vitae ex blandit turpis maximus lobortis.
+
+                              </p>
+                              <a class="button cv"
+                                 href="https://drive.google.com/drive/folders/1-oxQkeZgXHg3O2WlCkMW_jpsPJOR2UYE?usp=sharing">Download
+                                 CV</a>
+                              <a class="button project" href="https://github.com/aseelbahakeem">View Projects</a>
+                           </div>
+                        </div>
+                     </header>
+                  </div>
+
+               </div>
+            </section>
+
+            <!-- ----------------------------------------------------------------
+          ------------------- Blog Section------------------------------
+          ----------------------------------------------------------------- -->
+            <%- include("../blog"); -%>
+               <!-- ----------------------------------------------------------------
+          ------------------- Projects Section------------------------------
+          
+            
+               <!-- ----------------------------------------------------------------
+          ------------------- Contact Section------------------------------
+          ----------------------------------------------------------------- -->
+               <%- include("footer"); -%>
+         </div>
+      </div>
+      </section>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+         emailjs.init("VfIzT3kTUIDgpiKZe");
+      </script>
+      <script src="../script.js"></script>
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('header');
+            const navLinks = document.querySelector('.nav-bar');
+
+            window.addEventListener('scroll', () => {
+               const headerHeight = header.offsetHeight;
+               if (window.scrollY > headerHeight) {
+                  navLinks.classList.add('scrolled');
+               } else {
+                  navLinks.classList.remove('scrolled');
+               }
+            });
+         });
+      </script>
+   </body>
+   </body>
+
+</html>
